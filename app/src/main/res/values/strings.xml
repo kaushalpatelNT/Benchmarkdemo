@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">Smart On Site</string>
+    <string name="msg_token_fmt">Firebase_Token</string>
+
+    <!-- Login Screen -->
+    <string name="login_company_id">Company id</string>
+    <string name="login_user_id">User id</string>
+    <string name="login_password">Password</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="forgot_password">Forgot Password??</string>
+
+    <string name="msgCompanyIdNull">Please provide company Id.\nCompany Id must have alphanumeric characters.</string>
+    <string name="msgCompanyIdInvalid">Company Id must have 9 alphanumeric characters.</string>
+    <string name="msgUserIdNull">Please provide user id.\nUser Id must have alphanumeric characters.</string>
+    <string name="msgUserIdInvalid">User Id must have 5 alphanumeric characters.</string>
+    <string name="msgPasswordNull">Please provide password.</string>
+    <string name="msgPasswordInvalid">Please enter valid password.</string>
+
+
+    <!-- forgot password Screen -->
+    <string name="forgotMobileNo">Mobile No</string>
+    <string name="forgotSubmit">SUBMIT</string>
+    <string name="forgotLogin">Login</string>
+    <string name="msgMobileNoNull">please enter mobile no.</string>
+    <string name="msgMobileNoInvalid">please enter valid mobile no.</string>
+
+
+    <!--  Dashboard Screen -->
+    <string name="dashboardTitle">Dashboard</string>
+    <string name="assigned_dashboard">Assigned</string>
+    <string name="pending_dashboard">Pending</string>
+    <string name="completed_dashboard">Completed</string>
+    <string name="rejected_dashboard">Rejected</string>
+    <string name="logout_dashboard">Logout</string>
+    <string name="change_password">Change Password</string>
+    <string name="start_trip">Start Trip</string>
+    <string name="end_trip">End Trip</string>
+    <string name="list_trip">Trip List</string>
+
+
+    <!-- Assigned List Screen -->
+    <string name="assignedTitle">Assigned</string>
+
+    <!-- Pending List Screen -->
+    <string name="pendingTitle">Pending</string>
+
+
+    <!-- Completed List Screen -->
+    <string name="completedTitle">Completed</string>
+
+    <!-- Rejected List Screen -->
+    <string name="rejectedTitle">Rejected</string>
+
+
+    <!-- Assigned Complaint Detail Screen -->
+    <string name="AssignedDetails">Assigned Details</string>
+    <string name="complaintCustomerCode">Complaint No</string>
+    <string name="complaintCustomerName">Customer Name</string>
+    <string name="complaintCustomerAddress">Customer Address</string>
+    <string name="complaintCustomerPhone">Customer Phone</string>
+    <string name="complaintProductName">Product Name</string>
+    <string name="complaintBillNo">Bill No</string>
+    <string name="complaintDealerName">Dealer Name</string>
+    <string name="complaintType">Complaint Type</string>
+    <string name="complaintPriority">Priority</string>
+    <string name="customerRemark">Customer Remark</string>
+    <string name="customerMobileNo">Customer Contact No</string>
+    <string name="complaintDate">Complaint Date</string>
+    <string name="strOk">Ok</string>
+
+    <string name="msgInvalidReason">Please provide valid reason.</string>
+
+    <!--  Complaint Fillup Screen -->
+    <string name="fillup_client_name">Name Of Visitor</string>
+    <string name="fillup_client_number">Visitor Contact Number</string>
+    <string name="header_complaint_fillup">Complaint Fill Up</string>
+    <string name="image_open_gallary_title">Choose a Picture from</string>
+    <string name="hint_complaint_description">Complaint Action Taken</string>
+    <string name="msgMaxExpensesImageupload">Maximum 3 images are allowed to add.</string>
+    <string name="display_image">Images will be displayed here…</string>
+    <string name="msgPermission">Permission is required for application.</string>
+    <string name="msgimageUpload">Complaint Image Upload</string>
+    <string name="customForm">Action Taken Form</string>
+
+
+    <string name="msgDescriptionNull">Please enter action taken.</string>
+    <string name="msgStatusNull">Please select status.</string>
+
+    <!-- Common Message -->
+    <string name="msgNoInternet">No Internet Connection! Please try again</string>
+    <string name="msgServerNotConnect">Somthing went wrong! Please try again</string>
+    <string name="msgNotGetGps">Please restart/reconnect with internet and also check location permission is ON or not.</string>
+    <string name="msgPleasewait">Please wait...</string>
+    <string name="msgLogout">Are you sure want to log out?</string>
+    <string name="msgGPS">Please Enable GPS.</string>
+    <string name="msgStartTrip">Are you sure you want to start this trip?</string>
+    <string name="msgStartTripInternet">Please keep internet and GPS on during trip.</string>
+    <string name="msgStartTripleave">Are you sure you want to quit?</string>
+    <string name="upload_file_size_large_msg">File size should not be greater than 5 MB. Please try again !</string>
+
+
+    <!-- Change Password Screen -->
+    <string name="changepasswordTitle">Change Password</string>
+    <string name="changepassword_old_password">Current Password</string>
+    <string name="changepassword_new_password">New Password</string>
+    <string name="changepassword_confirm_password">Confirm Password</string>
+    <string name="btn_submit">SUBMIT</string>
+    <string name="msgOldPasswordNull">Please provide Current password.</string>
+    <string name="msgOldPasswordInvald">Please enter minimum 6 characters and maximum 15 characters password.</string>
+    <string name="msgNewPasswordNull">Please provide New password.</string>
+    <string name="msgNewPasswordInvalid">Please enter minimum 6 characters and maximum 15 characters new password.</string>
+    <string name="msgConfirmPasswordNull">Please provide confirm password.</string>
+    <string name="msgConfirmPasswordInvalid">Please enter minimum 6 characters and maximum 15 characters Current password.</string>
+    <string name="msgConfirmPasswordNotSame">New password and confirm password must be same.</string>
+    <string name="msgOldNewSame">New Password should not be same as Current Password.</string>
+
+    <!-- Action Detail Screen -->
+    <string name="complaint_action_id">Action Id</string>
+    <string name="complaint_action_taken">Action Taken</string>
+    <string name="complaint_status">Status</string>
+    <string name="Complaint_detail_title">Complaints Details</string>
+    <string name="Complaint_action_detail_title">Complaints Action Details</string>
+    <string name="msgMaxTripImageupload">Maximum 1 images are allowed to add.</string>
+
+    <!-- Trip List Screen -->
+    <string name="tripListTitle">Trip List</string>
+    <string name="tripDetailTitle">Trip Detail</string>
+    <string name="client_name">Visitor Name</string>
+    <string name="contact_no">Visitor Contact Number</string>
+    <string name="date">Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="distance">Distance</string>
+    <string name="description">Description</string>
+    <string name="end_trip_label">End Trip :</string>
+    <string name="start_trip_label">Start Trip :</string>
+
+    <!-- End Trip Screen -->
+    <string name="complaint_description">Complaint Description</string>
+    <string name="msgClientNameNull">Please enter visitor name.</string>
+    <string name="msgClientNoNull">Please enter visitor contact number</string>
+    <string name="msgClientNoNotMatches">Please enter correct contact number.</string>
+    <string name="msgClientDescription">Please enter description.</string>
+
+    <!-- Custom Form Type -->
+
+    <!-- Common Message -->
+    <string name="msg_GPS_Not_Getting">Didn\'t GetPlease check internet.</string>
+
+    <!--Notification Channel-->
+<string name="channel_name">Smart On Site</string>
+</resources>

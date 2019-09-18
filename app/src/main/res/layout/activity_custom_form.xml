@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header" />
+
+    <LinearLayout
+        android:id="@+id/lin_custom_form_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/sp_complaint_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/complaintfillup_spinner_margintop"
+            android:layout_marginBottom="@dimen/complaintfillup_spinner_margintop"
+            android:background="@drawable/sp_complaint_fillup_border"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dropdown" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="SUBMIT"
+            android:textColor="@color/header_text"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lin_custom_form_bottom"
+        android:layout_below="@+id/header"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="-20dp">
+
+        <LinearLayout
+            android:id="@+id/lin_custom_form_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/lin_custom_form_bottom"
+            android:layout_below="@id/header"
+            android:orientation="vertical" />
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

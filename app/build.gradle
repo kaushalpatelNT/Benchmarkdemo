@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.nichetech.smartonsite.benchmark"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.1"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "app"
+    productFlavors {
+        live {
+            buildConfigField "String", "PREF_PREFIX", "\"\""
+            buildConfigField "String", "Url", "\"http://service.benchmarkagencies.com/benchmarkapi/API/\""
+            buildConfigField "String", "imageUrl", "\"http://service.benchmarkagencies.com/benchmarkApi/UploadedImages/\""
+            dimension "app"
+        }
+        qa {
+            buildConfigField "String", "PREF_PREFIX", "\"qa_\""
+            buildConfigField "String", "Url", "\"http://benchmark.nicheapps.in/benchmarkApi/API/\""
+            buildConfigField "String", "imageUrl", "\"http://benchmark.nicheapps.in/benchmarkApi/UploadedImages/\""
+            dimension "app"
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.android.support:design:28.1.1'
+    implementation 'com.android.support:recyclerview-v7:28.0.1'
+
+    // API Library
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    implementation 'com.google.firebase:firebase-messaging:17.4.0'
+    implementation 'com.google.firebase:firebase-core:16.0.7'
+    implementation 'com.google.firebase:firebase-crash:16.2.1'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'commons-io:commons-io:2.0.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation 'com.android.support:multidex:1.0.3'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

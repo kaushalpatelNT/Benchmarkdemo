@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nichetech.smartonsite.benchmark">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.AssignedComplaintActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.AssignedComplaintDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.ComplaintFillupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.PendingComplaintsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.CompletedComplaintsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.RejectedComplaintActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.CustomFormActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+
+        <!-- Firebase -->
+
+        <service android:name="com.nichetech.smartonsite.benchmark.Firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.nichetech.smartonsite.benchmark.Firebase.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.ComplaintDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.ActionDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.StartTripActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.TripListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nichetech.smartonsite.benchmark.Activities.TripDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.nichetech.smartonsite.benchmark.Common.SrvPositioning"
+            android:enabled="true" />
+
+        <receiver android:name="com.nichetech.smartonsite.benchmark.Common.ReceiverPositioningAlarm">
+
+            <!-- this Broadcast Receiver only listens to the following intent -->
+            <intent-filter>
+                <action android:name="org.mabna.order.ACTION_REFRESH_SCHEDULE_ALARM" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.nichetech.smartonsite.benchmark.Common.GPSTracker"
+            android:enabled="true" />
+
+        <activity android:name="com.nichetech.smartonsite.benchmark.Activities.CustomFormDetailActivity" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="074820360128c00d09d3655df5ada67b6a6ca5f8" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCmle7dza9RbtSIcABwXEgtjFUOIpeJJbw" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

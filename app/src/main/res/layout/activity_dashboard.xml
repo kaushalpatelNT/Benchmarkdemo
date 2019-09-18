@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.nichetech.smartonsite.benchmark.Activities.DashboardActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+        <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Version"
+            android:textColor="@color/colorAccent"
+            android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_above="@id/tv_version"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+        <LinearLayout style="@style/Dasboard_LinearLayout_Row">
+
+            <LinearLayout
+                    android:id="@+id/ll_start_trip"
+                    style="@style/Dasboard_LinearLayout_Section">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/iv_start_trip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/iv_assign_margintop"
+                            android:src="@drawable/ic_start_trip"/>
+
+                    <TextView
+                            android:id="@+id/tv_task_start_trip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/start_trip"
+                            android:textColor="@color/recview_task"
+                            android:textSize="18sp"/>
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_assign_height"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/colorDivider"/>
+
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="@dimen/view_assign_height"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorDivider"/>
+
+            <LinearLayout
+                    android:id="@+id/ll_trip_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/iv_trip_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/iv_assign_margintop"
+                            android:src="@drawable/ic_list_trip"/>
+
+                    <TextView
+                            android:id="@+id/tv_task_trip_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/list_trip"
+                            android:textColor="@color/recview_task"
+                            android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_assign_height"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="@dimen/view_assign_marginleft"
+                        android:layout_marginRight="@dimen/view_assign_marginright"
+                        android:background="@color/colorDivider"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/ll_raw1"
+                style="@style/Dasboard_LinearLayout_Row"
+                android:visibility="visible">
+
+            <LinearLayout
+                    android:id="@+id/ll_assigned"
+                    style="@style/Dasboard_LinearLayout_Section">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/iv_assign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/iv_assign_margintop"
+                            android:src="@drawable/ic_assigned"/>
+
+                    <TextView
+                            android:id="@+id/tv_task_assign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/assigned_dashboard"
+                            android:textColor="@color/recview_task"
+                            android:textSize="18sp"/>
+
+                    <TextView
+                            android:id="@+id/tv_count_assign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FF0000"
+                            android:textSize="15sp"/>
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_assign_height"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/colorDivider"/>
+
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="@dimen/view_assign_height"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorDivider"/>
+
+            <LinearLayout
+                    android:id="@+id/ll_pending"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/iv_pending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/iv_assign_margintop"
+                            android:src="@drawable/ic_pending"/>
+
+                    <TextView
+                            android:id="@+id/tv_task_pending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/pending_dashboard"
+                            android:textColor="@color/recview_task"
+                            android:textSize="18sp"/>
+
+                    <TextView
+                            android:id="@+id/tv_count_pending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/text_count"
+                            android:textSize="15sp"/>
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_assign_height"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="@dimen/view_assign_marginleft"
+                        android:layout_marginRight="@dimen/view_assign_marginright"
+                        android:background="@color/colorDivider"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_raw2"
+                style="@style/Dasboard_LinearLayout_Row"
+                android:visibility="visible">
+
+            <LinearLayout
+                    android:id="@+id/ll_completed"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/iv_completed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_completed"/>
+
+                    <TextView
+                            android:id="@+id/tv_task_completed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_task_completed_margintop"
+                            android:text="@string/completed_dashboard"
+                            android:textColor="@color/recview_task"
+                            android:textSize="18sp"/>
+
+                    <TextView
+                            android:id="@+id/tv_count_completed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/text_count"
+                            android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_assign_height"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="@dimen/view_completed_marginleft"
+                        android:layout_marginRight="@dimen/view_completed_marginright"
+                        android:background="@color/colorDivider"/>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="@dimen/view_assign_height"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorDivider"/>
+
+            <LinearLayout
+                    android:id="@+id/ll_rejected"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/iv_rejected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_rejected"/>
+
+                    <TextView
+                            android:id="@+id/tv_task_rejected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/rejected_dashboard"
+                            android:textColor="@color/recview_task"
+                            android:textSize="18sp"/>
+
+                    <TextView
+                            android:id="@+id/tv_count_rejected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/text_count"
+                            android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_assign_height"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="@dimen/view_pending_marginleft"
+                        android:layout_marginRight="@dimen/view_pending_marginright"
+                        android:background="@color/colorDivider"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_raw3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+            <LinearLayout
+                    android:id="@+id/ll_changepassword"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                <ImageView
+                        android:id="@+id/iv_changepassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_change_password"/>
+
+                <TextView
+                        android:id="@+id/tv_changepassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/change_password"
+                        android:textColor="@color/recview_task"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/recview_task"
+                        android:textSize="15sp"/>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="@dimen/view_assign_height"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorDivider"/>
+
+            <LinearLayout
+                    android:id="@+id/ll_logout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:id="@+id/iv_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_logout"/>
+
+                <TextView
+                        android:id="@+id/tv_task_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/logout_dashboard"
+                        android:textColor="@color/recview_task"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/tv_count_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_count"
+                        android:textSize="15sp"
+                        tools:text="John Doe"/>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="@dimen/view_assign_height"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorDivider"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

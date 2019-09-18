@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include
+            android:id="@+id/header"
+            layout="@layout/layout_header"/>
+
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_below="@+id/header">
+
+        <LinearLayout
+                android:id="@+id/ll_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ll_main_marginleft"
+                android:layout_marginRight="@dimen/ll_main_marginright"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/tv_label_complaint_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_complint_detail_customerName_margintop"
+                        android:text="@string/complaintCustomerCode"
+                        android:textColor="@color/costomer_name"
+                        android:textSize="20sp"/>
+
+                <TextView
+                        android:id="@+id/tv_complaintNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLoginEditText"
+                        android:textSize="20sp"
+                        tools:text="K-20"/>
+
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <TextView
+                        android:id="@+id/tv_label_customerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_complint_detail_customerName_margintop"
+                        android:text="@string/complaintCustomerName"
+                        android:textColor="@color/costomer_name"
+                        android:textSize="20sp"/>
+
+                <TextView
+                        android:id="@+id/tv_customerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLoginEditText"
+                        android:textSize="20sp"
+                        tools:text="John Doe"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <TextView
+                        android:id="@+id/tv_label_customerAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_complint_detail_customerName_margintop"
+                        android:text="@string/complaintCustomerAddress"
+                        android:textColor="@color/costomer_name"
+                        android:textSize="20sp"/>
+
+                <TextView
+                        android:id="@+id/tv_customerAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLoginEditText"
+                        android:textSize="20sp"
+                        tools:text="John Doe"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <TextView
+                        android:id="@+id/tv_label_customerPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_complint_detail_customerName_margintop"
+                        android:text="@string/complaintCustomerPhone"
+                        android:textColor="@color/costomer_name"
+                        android:textSize="20sp"/>
+
+                <TextView
+                        android:id="@+id/tv_customerPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLoginEditText"
+                        android:textSize="20sp"
+                        tools:text="999999999"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+
+                    <ImageView
+                            android:id="@+id/ivProductName"
+                            style="@style/product_update_edit"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                  android:orientation="vertical"
+                                  android:layout_toStartOf="@id/ivProductName">
+                        <TextView
+                                android:id="@+id/tv_label_product_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/tv_complint_detail_complaintType_margintop"
+                                android:text="@string/complaintProductName"
+                                android:textColor="@color/costomer_name"
+                                android:textSize="20sp"/>
+
+                        <TextView
+                                android:id="@+id/tv_productName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorLoginEditText"
+                                android:textSize="20sp"
+                                tools:text="Mechanical"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+
+                    <ImageView
+                            android:id="@+id/ivBillNo"
+                            style="@style/product_update_edit"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                  android:orientation="vertical"
+                                  android:layout_toStartOf="@id/ivBillNo">
+                        <TextView
+                                android:id="@+id/tv_label_bill_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/tv_complint_detail_complaintType_margintop"
+                                android:text="@string/complaintBillNo"
+                                android:textColor="@color/costomer_name"
+                                android:textSize="20sp"/>
+
+                        <TextView
+                                android:id="@+id/tv_bill_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorLoginEditText"
+                                android:textSize="20sp"
+                                tools:text="1BI0"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+
+                    <ImageView
+                            android:id="@+id/ivDealerName"
+                            style="@style/product_update_edit"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                  android:orientation="vertical"
+                                  android:layout_toStartOf="@id/ivDealerName">
+                        <TextView
+                                android:id="@+id/tv_label_Dealar_Name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/tv_complint_detail_complaintType_margintop"
+                                android:text="@string/complaintDealerName"
+                                android:textColor="@color/costomer_name"
+                                android:textSize="20sp"/>
+
+                        <TextView
+                                android:id="@+id/tv_delear_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorLoginEditText"
+                                android:textSize="20sp"
+                                tools:text="Mechanical"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <TextView
+                        android:id="@+id/tv_label_complaintType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_complint_detail_complaintType_margintop"
+                        android:text="@string/complaintType"
+                        android:textColor="@color/costomer_name"
+                        android:textSize="20sp"/>
+
+                <TextView
+                        android:id="@+id/tv_complaintType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLoginEditText"
+                        android:textSize="20sp"
+                        tools:text="Mechanical"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <TextView
+                        android:id="@+id/tv_label_complaintPriority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_complint_detail_complaintPriority_margintop"
+                        android:text="@string/complaintPriority"
+                        android:textColor="@color/costomer_name"
+                        android:textSize="20sp"/>
+
+                <TextView
+                        android:id="@+id/tv_complaintPriority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLoginEditText"
+                        android:textSize="20sp"
+                        tools:text="High"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <TextView
+                        android:id="@+id/tv_label_complaintDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_complint_detail_complaintStatus_margintop"
+                        android:text="@string/customerRemark"
+                        android:textColor="@color/costomer_name"
+                        android:textSize="20sp"/>
+
+                <TextView
+                        android:id="@+id/tv_customerRemark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLoginEditText"
+                        android:textSize="20sp"
+                        tools:text="Completed"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <TextView
+                        android:id="@+id/tv_label_company_remark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_complint_detail_complaintStatus_margintop"
+                        android:text="@string/customerRemark"
+                        android:textColor="@color/costomer_name"
+                        android:textSize="20sp"/>
+
+                <TextView
+                        android:id="@+id/tv_company_remark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLoginEditText"
+                        android:textSize="20sp"
+                        tools:text="Completed"/>
+
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+                <TextView
+                        android:id="@+id/tv_label_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_complint_detail_complaintStatus_margintop"
+                        android:text="@string/complaintDate"
+                        android:textColor="@color/costomer_name"
+                        android:textSize="20sp"/>
+
+                <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorLoginEditText"
+                        android:textSize="20sp"
+                        tools:text="Completed"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/ll_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="gone">
+
+                <TextView
+                        android:id="@+id/tv_label_action_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:text="Action List"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="22sp"
+                        android:textStyle="bold"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_height"
+                        android:layout_marginBottom="@dimen/view_marginbottom"
+                        android:layout_marginTop="@dimen/view_margintop"
+                        android:background="@color/colorDivider"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rl_action"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+        <Button
+                android:id="@+id/btn_proceed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/header_bg"
+                android:paddingBottom="@dimen/btn_accept_paddingbottom"
+                android:paddingLeft="@dimen/btn_accept_paddingleft"
+                android:paddingRight="@dimen/btn_accept_paddingright"
+                android:paddingTop="@dimen/btn_accept_paddingtop"
+                android:text="proceed"
+                android:textColor="@color/header_text"
+                android:textSize="15sp"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<resources>
+
+
+    <style name="Login_EditText" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorLoginEditText</item>
+        <item name="android:tint">@color/colorLoginButton</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Text_Label" parent="AppTheme">
+        <item name="android:textColorHint">@color/colorLoginEditText</item>
+        <item name="android:textSize">20sp</item>
+        <item name="colorControlActivated">@color/colorLoginEditText</item>
+    </style>
+
+    <style name="Login_Button" parent="AppTheme">
+        <item name="android:layout_width">@dimen/btn_login_width</item>
+        <item name="android:layout_height">@dimen/btn_login_height</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/btn_login_margintop</item>
+        <item name="android:background">@drawable/btn_login_bg</item>
+        <item name="android:textColor">@color/colorLoginButton</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Dasboard_LinearLayout_Row" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:weightSum">2</item>
+    </style>
+
+    <style name="Dasboard_LinearLayout_Section" parent="AppTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="product_update_edit" parent="AppTheme">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/ic_edit</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nichetech.smartonsite.benchmark.Activities.StartTripActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_marginBottom="5dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/complaintfillup_margin"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_start_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ed_client_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="@dimen/complaintfillup_et_marginTop"
+                        android:background="@drawable/et_comp_fillup_border"
+                        android:gravity="start|center"
+                        android:hint="@string/fillup_client_name"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/complaintfillup_et_padding"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+
+                    <EditText
+                        android:id="@+id/ed_client_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="@dimen/complaintfillup_et_marginTop"
+                        android:background="@drawable/et_comp_fillup_border"
+                        android:gravity="start|center"
+                        android:hint="@string/fillup_client_number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:padding="@dimen/complaintfillup_et_padding"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_start_trip"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:src="@drawable/start" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_end_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fillup_et_bg"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_end_name_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/client_name"
+                            android:textColor="@color/costomer_name"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_end_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/colorText"
+                            android:textSize="17sp"
+                            tools:text="John Miller" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/colorDivider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_end_no_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/contact_no"
+                            android:textColor="@color/costomer_name"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_end_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/colorText"
+                            android:textSize="17sp"
+                            tools:text="+0123456789" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_trip_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="@dimen/complaintfillup_et_marginTop"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/et_comp_fillup_border"
+                    android:gravity="start"
+                    android:hint="@string/complaint_description"
+                    android:nestedScrollingEnabled="true"
+                    android:overScrollMode="always"
+                    android:padding="@dimen/complaintfillup_et_padding"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.8"
+                    android:background="@drawable/ll_ivupload_border"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/imagehint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/gv_images"
+                            android:drawableTop="@drawable/ic_camera"
+                            android:text="@string/msgimageUpload"
+                            android:textAlignment="center" />
+
+                        <ImageView
+                            android:id="@+id/iv_images"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/stylishimageborder"
+                            android:columnWidth="100dp"
+                            android:gravity="center"
+                            android:horizontalSpacing="10dp"
+                            android:nestedScrollingEnabled="true"
+                            android:numColumns="3"
+                            android:padding="5dp"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="10dp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/complaintfillup_spinner_margintop"
+                    android:background="@drawable/sp_complaint_fillup_border"
+                    android:dropDownWidth="match_parent"
+                    android:spinnerMode="dropdown"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_end_trip"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:src="@drawable/endtrip"
+                    android:visibility="visible"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

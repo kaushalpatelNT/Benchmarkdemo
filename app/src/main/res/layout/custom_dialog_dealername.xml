@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingBottom="10dp"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:paddingTop="10dp">
+
+
+    <AutoCompleteTextView
+            android:id="@+id/atDealerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/tvPartPrice"
+            android:layout_weight="1"
+            android:minHeight="50dp"
+            android:gravity="start"
+            android:dropDownWidth="match_parent"
+            android:hint="Select Dealer Name"/>
+
+    <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:weightSum="2">
+
+        <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/header_bg"
+                android:paddingBottom="@dimen/btn_accept_paddingbottom"
+                android:paddingLeft="@dimen/btn_accept_paddingleft"
+                android:paddingRight="@dimen/btn_accept_paddingright"
+                android:paddingTop="@dimen/btn_accept_paddingtop"
+                android:text="Submit"
+                android:textColor="@color/header_text"
+                android:textSize="15dp"/>
+
+        <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/btn_reject_marginleft"
+                android:layout_weight="1"
+                android:background="@color/btn_reject"
+                android:paddingBottom="@dimen/btn_reject_paddingbottom"
+                android:paddingLeft="@dimen/btn_reject_paddingleft"
+                android:paddingRight="@dimen/btn_reject_paddingright"
+                android:paddingTop="@dimen/btn_reject_paddingtop"
+                android:text="cancel"
+                android:textColor="@color/header_text"
+                android:textSize="15dp"/>
+    </LinearLayout>
+
+</LinearLayout>

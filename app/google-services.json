@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "342519202511",
+    "firebase_url": "https://benchmark-8832f.firebaseio.com",
+    "project_id": "benchmark-8832f",
+    "storage_bucket": "benchmark-8832f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342519202511:android:d0ebfaf54896740e",
+        "android_client_info": {
+          "package_name": "com.nichetech.smartonsite.benchmark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342519202511-ujverq8npi0ifdj3iomn83lci2v3iuue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMkzWnGS7rrZm9niF8vheIMfM1HeE632o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

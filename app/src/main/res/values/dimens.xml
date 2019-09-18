@@ -1,0 +1,105 @@
+<resources>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- Splash Screen -->
+
+    <!-- Login Screen -->
+    <dimen name="iv_login_header_margintop">10dp</dimen>
+    <dimen name="iv_login_header_marginright">40dp</dimen>
+    <dimen name="iv_login_header_marginleft">40dp</dimen>
+    <dimen name="ll_login_marginright">20dp</dimen>
+    <dimen name="ll_login_marginleft">20dp</dimen>
+    <dimen name="btn_login_width">130dp</dimen>
+    <dimen name="btn_login_height">50dp</dimen>
+    <dimen name="btn_login_margintop">10dp</dimen>
+    <dimen name="tv_forgot_paddingright">35dp</dimen>
+    <dimen name="tv_forgot_paddingleft">35dp</dimen>
+    <dimen name="tv_forgot_margintop">15dp</dimen>
+
+    <!-- Assigned Complaint Screen -->
+    <dimen name="ll_margin_bottom">5dp</dimen>
+    <dimen name="ll_margin_right">15dp</dimen>
+    <dimen name="ll_margin_left">15dp</dimen>
+
+    <!-- Pending Complaint Screen -->
+    <dimen name="ll_pending_margin_bottom">10dp</dimen>
+    <dimen name="ll_pending_margin_right">15dp</dimen>
+    <dimen name="ll_pending_margin_left">15dp</dimen>
+
+    <!-- Completed Complaint Screen -->
+    <dimen name="ll_completed_margin_bottom">5dp</dimen>
+    <dimen name="ll_completed_margin_right">15dp</dimen>
+    <dimen name="ll_completed_margin_left">15dp</dimen>
+
+
+    <!-- Rejected Complaint Screen -->
+    <dimen name="tv_rejected_header_margintop">20dp</dimen>
+    <dimen name="tv_rejected_header_marginbottom">20dp</dimen>
+    <dimen name="tv_rejected_header_marginleft">20dp</dimen>
+    <dimen name="iv_rejected_header_paddingleft">10dp</dimen>
+    <dimen name="ll_rejected_margin_bottom">5dp</dimen>
+    <dimen name="ll_rejected_margin_right">15dp</dimen>
+    <dimen name="ll_rejected_margin_left">15dp</dimen>
+
+    <!-- Dashboard Screen -->
+
+    <dimen name="iv_assign_margintop">7dp</dimen>
+    <dimen name="view_assign_marginright">5dp</dimen>
+    <dimen name="view_assign_marginleft">5dp</dimen>
+
+    <dimen name="view_assign_height">1dp</dimen>
+    <dimen name="view_pending_marginright">5dp</dimen>
+    <dimen name="view_pending_marginleft">5dp</dimen>
+
+    <dimen name="tv_task_completed_margintop">10dp</dimen>
+    <dimen name="view_completed_marginright">5dp</dimen>
+    <dimen name="view_completed_marginleft">5dp</dimen>
+
+
+    <!-- Complaint Detail Screen -->
+    <dimen name="ll_main_marginleft">10dp</dimen>
+    <dimen name="ll_main_marginright">10dp</dimen>
+    <dimen name="tv_complint_detail_customerName_margintop">10dp</dimen>
+    <dimen name="tv_complint_detail_name_margintop">10dp</dimen>
+    <dimen name="tv_complint_detail_complaintType_margintop">10dp</dimen>
+    <dimen name="tv_complint_detail_type_margintop">10dp</dimen>
+    <dimen name="tv_complint_detail_complaintPriority_margintop">10dp</dimen>
+    <dimen name="tv_complint_detail_priority_margintop">10dp</dimen>
+    <dimen name="tv_complint_detail_complaintStatus_margintop">10dp</dimen>
+    <dimen name="tv_complint_detail_status_margintop">10dp</dimen>
+    <dimen name="view_margintop">10dp</dimen>
+    <dimen name="view_marginbottom">1dp</dimen>
+    <dimen name="view_height">1dp</dimen>
+    <dimen name="btn_accept_paddingtop">15dp</dimen>
+    <dimen name="btn_accept_paddingbottom">15dp</dimen>
+    <dimen name="btn_accept_paddingright">30dp</dimen>
+    <dimen name="btn_accept_paddingleft">30dp</dimen>
+    <dimen name="btn_reject_paddingtop">15dp</dimen>
+    <dimen name="btn_reject_paddingbottom">15dp</dimen>
+    <dimen name="btn_reject_paddingright">30dp</dimen>
+    <dimen name="btn_reject_paddingleft">30dp</dimen>
+    <dimen name="btn_reject_marginleft">20dp</dimen>
+
+
+    <!-- Complaint Detail Screen -->
+    <dimen name="divider_height">0.5dp</dimen>
+
+    <!-- Forgot Password Screen -->
+
+    <!-- Compalint Fill Up -->
+    <dimen name="complaintfillup_margin">10dp</dimen>
+    <dimen name="complaintfillup_et_marginTop">10dp</dimen>
+    <dimen name="complaintfillup_et_padding">10dp</dimen>
+    <dimen name="complaintfillup_spinner_margintop">15dp</dimen>
+    <dimen name="complaintfillup_btn_margintop">15dp</dimen>
+    <dimen name="text_margin">5dp</dimen>
+
+
+</resources>

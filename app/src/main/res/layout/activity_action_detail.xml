@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/AssignedDetails"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/ic_back" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/ll_main_marginleft"
+        android:layout_marginRight="@dimen/ll_main_marginright"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_label_complaint_action_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_complint_detail_customerName_margintop"
+                android:text="@string/complaint_action_id"
+                android:textColor="@color/costomer_name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_complaint_action_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorLoginEditText"
+                android:textSize="20sp"
+                tools:text="John Doe" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_marginBottom="@dimen/view_marginbottom"
+                android:layout_marginTop="@dimen/view_margintop"
+                android:background="@color/colorDivider" />
+
+            <TextView
+                android:id="@+id/tv_label_complaint_action_taken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_complint_detail_complaintType_margintop"
+                android:text="@string/complaint_action_taken"
+                android:textColor="@color/costomer_name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_complaint_action_taken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorLoginEditText"
+                android:textSize="20sp"
+                tools:text="Mechanical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_marginBottom="@dimen/view_marginbottom"
+                android:layout_marginTop="@dimen/view_margintop"
+                android:background="@color/colorDivider" />
+
+            <TextView
+                android:id="@+id/tv_label_complaint_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_complint_detail_complaintPriority_margintop"
+                android:text="@string/complaint_status"
+                android:textColor="@color/costomer_name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_complaint_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorLoginEditText"
+                android:textSize="20sp"
+                tools:text="High" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_marginBottom="@dimen/view_marginbottom"
+                android:layout_marginTop="@dimen/view_margintop"
+                android:background="@color/colorDivider" />
+
+            <TextView
+                android:id="@+id/tv_label_complaint_action_crdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_complint_detail_complaintStatus_margintop"
+                android:text="Date"
+                android:textColor="@color/costomer_name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_complaint_action_crdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorLoginEditText"
+                android:textSize="20sp"
+                tools:text="Completed" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_marginBottom="@dimen/view_marginbottom"
+                android:layout_marginTop="@dimen/view_margintop"
+                android:background="@color/colorDivider" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ll_main"
+        android:layout_centerInParent="true">
+
+        <GridView
+            android:id="@+id/gv_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/stylishimageborder"
+            android:columnWidth="100dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:paddingBottom="@dimen/text_margin"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingRight="@dimen/text_margin"
+            android:paddingTop="@dimen/text_margin"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_noImages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|center_horizontal"
+            android:text="No images found"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </FrameLayout>
+</RelativeLayout>

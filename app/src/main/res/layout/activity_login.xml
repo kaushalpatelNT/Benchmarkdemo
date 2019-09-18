@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nichetech.smartonsite.benchmark.Activities.LoginActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="@dimen/iv_login_header_marginleft"
+                android:layout_marginRight="@dimen/iv_login_header_marginright"
+                android:layout_marginTop="@dimen/iv_login_header_margintop"
+                android:src="@drawable/login_logo" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ll_login_marginleft"
+                android:layout_marginRight="@dimen/ll_login_marginright"
+                android:layout_marginTop="@dimen/ll_login_marginright"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/Text_Label"
+                android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/etCompanyId"
+                        style="@style/Login_EditText"
+                        android:drawableRight="@drawable/ic_user"
+                        android:hint="@string/login_company_id"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="@integer/maxCompanyId"
+                        android:textAllCaps="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/Text_Label">
+
+                    <EditText
+                        android:id="@+id/etUserId"
+                        style="@style/Login_EditText"
+                        android:drawableRight="@drawable/ic_user"
+                        android:hint="@string/login_user_id"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="@integer/maxUserId" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/Text_Label">
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        style="@style/Login_EditText"
+                        android:drawableRight="@drawable/ic_password"
+                        android:hint="@string/login_password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLength="@integer/maxPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    style="@style/Login_Button"
+                    android:text="@string/btn_login" />
+
+                <TextView
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/tv_forgot_margintop"
+                    android:paddingLeft="@dimen/tv_forgot_paddingleft"
+                    android:paddingRight="@dimen/tv_forgot_paddingright"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/colorLoginButton"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

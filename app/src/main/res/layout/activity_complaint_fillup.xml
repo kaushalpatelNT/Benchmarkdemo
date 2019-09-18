@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="@color/fillup_bg"
+                android:orientation="vertical">
+
+    <include
+            android:id="@+id/header"
+            layout="@layout/layout_header"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/complaintfillup_margin"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:text="Company Remark :"
+                      android:textSize="16sp"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spCompanyRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/complaintfillup_spinner_margintop"
+                    android:background="@drawable/sp_complaint_fillup_border"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/ActionList"
+                    android:spinnerMode="dropdown"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edOtherReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="3"
+                    android:maxLength="500"
+                    android:hint="Enter Remark"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Used Parts :" android:layout_marginTop="@dimen/complaintfillup_spinner_margintop"
+                      android:textSize="16sp"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvParts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/cardview_light_background"
+                    tools:listitem="@layout/item_parts"/>
+
+            <ImageView
+                    android:id="@+id/iv_add_parts"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/complaintfillup_spinner_margintop"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/ic_plus"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:text="Labor Charge :"
+                      android:textSize="16sp"/>
+
+            <EditText
+                    android:id="@+id/et_labor_charge"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/complaintfillup_et_marginTop"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/et_comp_fillup_border"
+                    android:gravity="start"
+                    android:inputType="number"
+                    android:digits="0123456789."
+                    android:hint="Enter Labor Charge"
+                    android:padding="@dimen/complaintfillup_et_padding"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:visibility="visible"/>
+
+            <EditText
+                    android:id="@+id/et_complaintfillup_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="@dimen/complaintfillup_et_marginTop"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/et_comp_fillup_border"
+                    android:gravity="start"
+                    android:hint="@string/hint_complaint_description"
+                    android:padding="@dimen/complaintfillup_et_padding"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:visibility="gone"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1.8"
+                    android:background="@drawable/ll_ivupload_border"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                    <TextView
+                            android:id="@+id/imagehint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/gv_images"
+                            android:text="@string/display_image"
+                            android:textAlignment="center"/>
+
+                    <GridView
+                            android:id="@+id/gv_images"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/stylishimageborder"
+                            android:columnWidth="100dp"
+                            android:gravity="center"
+                            android:horizontalSpacing="10dp"
+                            android:numColumns="3"
+                            android:padding="5dp"
+                            android:nestedScrollingEnabled="true"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="10dp"
+                            android:visibility="gone"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                    android:id="@+id/iv_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/complaintfillup_spinner_margintop"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/ic_plus"/>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Payment Received :"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:layout_weight="1"/>
+
+                <RadioGroup
+                        android:id="@+id/rdgPaymentReceived"
+                        android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:layout_weight="1" android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                            android:id="@+id/rdbYes"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checked="true"
+                            android:text="Yes"/>
+
+                    <RadioButton
+                            android:id="@+id/rdbNo"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="No"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Spinner
+                    android:id="@+id/sp_complaint_fillup"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/complaintfillup_spinner_margintop"
+                    android:background="@drawable/sp_complaint_fillup_border"
+                    android:dropDownWidth="match_parent"
+                    android:spinnerMode="dropdown"/>
+
+            <Button
+                    android:id="@+id/btn_fillup_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/complaintfillup_btn_margintop"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="SUBMIT"
+                    android:textColor="@color/header_text"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

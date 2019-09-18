@@ -1,0 +1,17 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+
+    <!-- Login Screen -->
+    <dimen name="iv_login_header_margintop">20dp</dimen>
+    <dimen name="iv_login_header_marginright">80dp</dimen>
+    <dimen name="iv_login_header_marginleft">80dp</dimen>
+    <dimen name="ll_login_marginright">80dp</dimen>
+    <dimen name="ll_login_marginleft">80dp</dimen>
+    <dimen name="btn_login_margintop">20dp</dimen>
+    <dimen name="tv_forgot_paddingright">70dp</dimen>
+    <dimen name="tv_forgot_paddingleft">70dp</dimen>
+    <dimen name="tv_forgot_margintop">30dp</dimen>
+</resources>

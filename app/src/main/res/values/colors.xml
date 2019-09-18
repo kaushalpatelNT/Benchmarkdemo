@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0E6EA8</color>
+    <color name="colorPrimaryDark">#024164</color>
+    <color name="colorAccent">#0E6EA8</color>
+
+    <color name="colorDivider">#b7b7b7</color>
+    <color name="colorText">#333333</color>
+
+    <!-- Login Screen -->
+    <color name="colorLoginEditText">#333333</color>
+    <color name="colorLoginButton">#2A4E96</color>
+
+
+    <!-- Dashboard Screen -->
+
+    <color name="header_bg">#045d94</color>
+    <color name="header_text">#ffffff</color>
+    <color name="recview_task">#000000</color>
+    <color name="text_count">#898989</color>
+
+
+
+    <!-- Assigned Complaints Screen-->
+    <color name="lv_assigned_compalints">#ffffff</color>
+
+    <!-- Pending Complaints Screen-->
+
+    <!-- Completed Complaints Screen-->
+
+    <!-- Rejected Complaints Screen-->
+
+    <!-- Complaint Detail screen -->
+    <color name="costomer_name">#8b8b8b</color>
+    <color name="btn_reject">#9e0b0f</color>
+
+    <!-- Complaint Fill up -->
+    <color name="fillup_bg">#f1f5f8</color>
+    <color name="fillup_et_bg">#ffffff</color>
+    <color name="fillup_border">#e1dfdf</color>
+
+
+    <!--  -->\
+    <color name="text_black">#000000</color>
+
+</resources>

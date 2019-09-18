@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="maxCompanyId">9</integer>
+    <integer name="maxUserId">25</integer>
+    <integer name="maxPassword">15</integer>
+    <integer name="maxMobileNo">10</integer>
+
+</resources>
